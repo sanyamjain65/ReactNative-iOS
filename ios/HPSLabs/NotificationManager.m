@@ -21,7 +21,7 @@ RCT_EXPORT_METHOD(showNotification:(NSString *)title message:(NSString *)message
       content.body = message;
       content.sound = [UNNotificationSound defaultSound];
       //trigger notification
-      UNTimeIntervalNotificationTrigger *trigger = [UNTimeIntervalNotificationTrigger triggerWithTimeInterval:1 repeats:NO];
+      UNTimeIntervalNotificationTrigger *trigger = [UNTimeIntervalNotificationTrigger triggerWithTimeInterval:5 repeats:NO];
       //generate notification
       UNNotificationRequest *request = [UNNotificationRequest requestWithIdentifier:@"UNLocalNotification" content:content trigger:trigger];
       [center addNotificationRequest:request withCompletionHandler:nil];
