@@ -17,7 +17,7 @@ export default class App extends Component {
     onPressLearnMore() {
         var NotificationMAnager = NativeModules.NotificationManager;
         //title and body to display in the notificaiton
-        var title = "HPS Labs Assignment";
+        var title = "My App";
         var body = "To generate notification using React and native iOS";
         //To generate notification from native iOS Module
         NotificationMAnager.showNotification(title, body,(error, response) => {
